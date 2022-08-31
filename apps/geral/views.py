@@ -5,4 +5,5 @@ from django.http import HttpResponse
 
 
 def principal(request):
-    return HttpResponse('<h1>Olá Mundo Novo - Djangooooooo</h1>')
+    template_name = 'base.html'
+    return render(request, template_name, {})
