@@ -2,6 +2,7 @@ from django.contrib import messages
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from .forms import CategoriaForm
+from .models import Categoria
 
 
 # Create your views here.
@@ -30,3 +31,15 @@ def nova_categoria(request):
         form = CategoriaForm()
     context['form'] = form
     return render(request, template_name, context)
+
+
+def lista_categorias(request):
+    template_name = 'geral/lista_categorias.html'
+    # categorias = Categoria.objects.all() <-- seleciona tudo, independente do usuário logado
+    categorias = Categoria.objects.filter(usuario=request.user) # <-- somente do usuário admin
+    context = {
+        'categorias': categorias,
+    }
+    return render(request, template_name, context)
+
+
