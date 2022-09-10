@@ -1,6 +1,10 @@
 {% extends 'base.html' %}
 {% load widget_tweaks %}
 
+{% block titulo %}
+    Categoria | {{ block.super }}
+{% endblock titulo %}
+
 {% block corpo %}
     <div class="container">
         <div class="row">

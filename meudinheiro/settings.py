@@ -35,7 +35,7 @@ ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=lambda v: [s.strip() for s in v.spl
 
 # Application definition
 
-# Configuração refatorada pelo Prof André para INSTALLED_APPS
+# Configuração refatorada pelo Prof. André para 'INSTALLED_APPS'
 DJANGO_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -47,6 +47,7 @@ DJANGO_APPS = [
 
 APPS_PROJETO = [
     'geral.apps.GeralConfig',
+    'movimentacoes.apps.MovimentacoesConfig',
 ]
 
 APPS_TERCEIROS = [
@@ -89,7 +90,7 @@ WSGI_APPLICATION = 'meudinheiro.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
-# configuração dada pelo Prof. André 22/08/22
+# Configuração dada pelo Prof. André 22/08/22
 DATABASES = {
     'default': {
         'ENGINE': config('DB_ENGINE'),
