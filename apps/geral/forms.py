@@ -10,3 +10,8 @@ class CategoriaForm(forms.ModelForm):
         fields = ['nome', 'tipo', 'descricao']
         # fields = '__all__'
         # exclude = ['usuario']
+
+
+class LoginForm(forms.Form):
+    username = forms.CharField(label='Usuário', required=True)
+    password = forms.CharField(label='Senha', required=True, widget=forms.PasswordInput())
