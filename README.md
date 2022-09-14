@@ -4,9 +4,9 @@
 
 # Configurações iniciais de um Projeto Django
 
-Criar o diretório do projeto - mkdir <nome do diretório>
+Criar o diretório do projeto - mkdir <nome-do-diretório>
 
-Entrar neste diretório - cd <nome do diretório>
+Entrar neste diretório - cd <nome-do-diretório>
 
 <p>Criar um ambiente virtual dentro deste diretório com o comando:</p>
 python -m venv .venv (windows)<br>
@@ -20,7 +20,7 @@ Usar o gerenciador de pacotes do Python: PIP
 - pip install django
 
 Crie o projeto no Django com o comando:
-- django-admin startproject meudinheiro
+- django-admin startproject <nome-do-projeto>
 
 <p>Crie um diretório "apps" e, ao entrar nesta app, rodar o comando:</p>
 python3 ../manage.py startapp geral
