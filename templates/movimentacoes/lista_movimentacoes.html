@@ -5,7 +5,7 @@
 {% endblock titulo %}
 
 {% block corpo %}
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
             <div class="col">
             <h1>Minhas Movimentações</h1>
@@ -30,7 +30,7 @@
                                 <td>{{ movimentacao.valor }}</td>
                                 <td>{{ movimentacao.data_criacao }}</td>
                                 <td>{{ movimentacao.categoria }}</td>
-                                <td><a href="{% url 'movimentacoes:editar_movimentacao' movimentacao.id %}" class="btn btn-info btn-sm">Editar</a>|<a href="{% url 'movimentacoes:deletar_movimentacao' movimentacao.id %}" class="btn btn-danger btn-sm">Apagar</a></td>
+                                <td><a href="{% url 'movimentacoes:editar_movimentacao' movimentacao.id %}" class="btn btn-info btn-sm">Editar</a><a href="{% url 'movimentacoes:deletar_movimentacao' movimentacao.id %}" class="btn btn-danger btn-sm">Apagar</a></td>
                             </tr>
                         {% endfor %}
                     </tbody>
